@@ -49,7 +49,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="weather-data mt-4 w-full md:flex justify-center items-center">
+        <div className="weather-data mt-4 w-full flex justify-center items-center">
           {
             weather_data && (
               <div className="mt-4 text-center grid gap-6 bg-white bg-opacity-70 p-6 rounded-lg shadow-lg w-full h-full border-4 border-black bg-[url('Field-yellow-flowers-with-hills-cloudy-sky.jpg')] bg-no-repeat bg-cover bg-center">

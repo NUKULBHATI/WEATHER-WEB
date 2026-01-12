@@ -30,13 +30,13 @@ function App() {
 
   return (
     <>
-      <div className="justify-center items-center h-screen w-screen space-y-4 p-4 bg-blue-200 bg-[url('green-field-with-sunny-day.jpg')] bg-no-repeat bg-cover bg-center">
+      <div className="justify-center items-center h-full w-screen space-y-4 p-4 bg-blue-200 bg-[url('green-field-with-sunny-day.jpg')] bg-no-repeat bg-cover bg-center">
         <div className="bg-blue-500 text-white p-4 rounded-lg md:flex justify-between w-full">
           <h1 className="text-5xl font-bold pt-10 text-shadow-black text-shadow-lg">SKY-SENSE</h1>
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="infobox shadow-gray-800 bg-gray-300 rounded-lg shadow-md border-4 border-gray-500 p-4 md:flex flex-col items-center justify-center">
               <h2 className="text-3xl font-bold mb-2 text-black">Search Weather</h2>
-              <div className="md:flex items-center space-x-2 border-black p-2 text-black">
+              <div className="flex items-center space-x-2 border-black p-2 text-black">
                 <input
                   type="text" value={city_name} onChange={(e) => setCity_name(e.target.value)}
                   placeholder="Enter city name"
@@ -53,7 +53,12 @@ function App() {
           {
             weather_data && (
               <div className="mt-4 text-center grid gap-6 bg-white bg-opacity-70 p-6 rounded-lg shadow-lg w-full h-full border-4 border-black bg-[url('Field-yellow-flowers-with-hills-cloudy-sky.jpg')] bg-no-repeat bg-cover bg-center">
-                {/* <img src={` https://openweathermap.org/img/wn/10d@2x.png`} alt=""></img> */}
+                <img
+                  src={`https://openweathermap.org/img/wn/${weather_data.weather[0].icon}@2x.png`}
+                  alt={weather_data.weather[0].description}
+                  className="mx-auto w-24 h-24 md:w-32 md:h-32"
+                />
+
                 <h3 className="text-5xl font-bold underline">{weather_data.name}, {weather_data.sys.country}</h3>
                 <div className='flex justify-evenly place-content-between mt-4 flex-wrap gap-20'>
                   <p className="text-2xl grid gap-6">
@@ -61,7 +66,7 @@ function App() {
                     <p className='hover:scale-110 duration-300 font-semibold'> {(weather_data.main.temp - 273.15).toFixed(2)} °C</p>
                   </p>
                   <p className="text-2xl grid gap-6">
-                    <p className='font-extrabold'>WEATHER:</p> 
+                    <p className='font-extrabold'>WEATHER:</p>
                     <p className='hover:scale-110 duration-300 font-semibold'>{weather_data.weather[0].description}</p>
                   </p>
                   <p className="text-2xl grid gap-6">
@@ -74,9 +79,9 @@ function App() {
                   </p>
                 </div>
               </div>
-              )
-            }
-          </div>
+            )
+          }
+        </div>
 
       </div>
     </>

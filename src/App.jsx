@@ -31,12 +31,12 @@ function App() {
   return (
     <>
       <div className="justify-center items-center h-screen w-screen space-y-4 p-4 bg-blue-200 bg-[url('green-field-with-sunny-day.jpg')] bg-no-repeat bg-cover bg-center">
-        <div className="bg-blue-500 text-white p-4 rounded-lg flex justify-between w-full">
+        <div className="bg-blue-500 text-white p-4 rounded-lg md:flex justify-between w-full">
           <h1 className="text-5xl font-bold pt-10 text-shadow-black text-shadow-lg">SKY-SENSE</h1>
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
-            <div className="infobox shadow-gray-800 bg-gray-300 rounded-lg shadow-md border-4 border-gray-500 p-4 flex flex-col items-center justify-center">
+            <div className="infobox shadow-gray-800 bg-gray-300 rounded-lg shadow-md border-4 border-gray-500 p-4 md:flex flex-col items-center justify-center">
               <h2 className="text-3xl font-bold mb-2 text-black">Search Weather</h2>
-              <div className="flex items-center space-x-2 border-black p-2 text-black">
+              <div className="md:flex items-center space-x-2 border-black p-2 text-black">
                 <input
                   type="text" value={city_name} onChange={(e) => setCity_name(e.target.value)}
                   placeholder="Enter city name"
@@ -49,7 +49,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="weather-data mt-4 w-full flex justify-center items-center">
+        <div className="weather-data mt-4 w-full md:flex justify-center items-center">
           {
             weather_data && (
               <div className="mt-4 text-center grid gap-6 bg-white bg-opacity-70 p-6 rounded-lg shadow-lg w-full h-full border-4 border-black bg-[url('Field-yellow-flowers-with-hills-cloudy-sky.jpg')] bg-no-repeat bg-cover bg-center">

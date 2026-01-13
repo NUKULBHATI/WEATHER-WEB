@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <div className="justify-center items-center h-full w-screen space-y-4 p-4 bg-blue-200 bg-[url('/green-field-with-sunny-day.jpg')]
+      <div className="justify-center items-center h-screen w-screen space-y-4 p-4 bg-blue-200 bg-[url('/green-field-with-sunny-day.jpg')]
  bg-no-repeat bg-cover bg-center">
         <div className="bg-blue-500 text-white p-4 rounded-lg md:flex justify-between w-full">
           <h1 className="text-5xl font-bold pt-10 text-shadow-black text-shadow-lg">SKY-SENSE</h1>

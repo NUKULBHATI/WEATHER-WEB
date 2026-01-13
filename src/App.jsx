@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <div className="justify-center items-center h-screen w-screen space-y-4 p-4 bg-blue-200 bg-[url('/green-field-with-sunny-day.jpg')]
+      <div className="justify-center items-center h-screen w-screen space-y-4 p-4 bg-blue-200 bg-[url('green-field-with-sunny-day.jpg')]
  bg-no-repeat bg-cover bg-center">
         <div className="bg-blue-500 text-white p-4 rounded-lg md:flex justify-between w-full">
           <h1 className="text-5xl font-bold pt-10 text-shadow-black text-shadow-lg">SKY-SENSE</h1>
@@ -53,7 +53,7 @@ function App() {
         <div className="weather-data mt-4 w-full flex justify-center items-center">
           {
             weather_data && (
-              <div className="mt-4 text-center grid gap-6 bg-white bg-opacity-70 p-6 rounded-lg shadow-lg w-full h-full border-4 border-black bg-[url('/Field-yellow-flowers-with-hills-cloudy-sky.jpg')]
+              <div className="mt-4 text-center grid gap-6 bg-white bg-opacity-70 p-6 rounded-lg shadow-lg w-full h-full border-4 border-black bg-[url('Field-yellow-flowers-with-hills-cloudy-sky.jpg')]
  bg-no-repeat bg-cover bg-center">
                 <img
                   src={`https://openweathermap.org/img/wn/${weather_data.weather[0].icon}@2x.png`}
